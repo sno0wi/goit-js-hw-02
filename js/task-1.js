@@ -7,6 +7,7 @@ function makeTransaction(quantity, pricePerDroid, customerCredits) {
         return `You ordered ${quantity} droids worth ${totalPrice} credits!`
     }
 }
+
 /*
 function makeTransaction(quantity, pricePerDroid, customerCredits){
 const totalPrice = quantity * pricePerDroid;
@@ -16,6 +17,25 @@ const count = totalPrice > customerCredits ? "Insufficient funds!" : `You ordere
 return count;
 }
 */
+
+/*function makeTransaction(quantity, pricePerDroid, customerCredits){
+    const totalPrice = quantity * pricePerDroid;
+    let message;
+
+    switch (true) {
+        case totalPrice > customerCredits:
+            message = "Insufficient funds!";
+            break;
+        case totalPrice <= customerCredits:
+            message = `You ordered ${quantity} droids worth ${totalPrice} credits!`
+            break;
+        default:
+            message = "Invalid input.";
+    }
+    return message;
+}
+*/
+
 // Log to console
 console.log(makeTransaction(5, 3000, 23000)); // "You ordered 5 droids worth 15000 credits!"
 console.log(makeTransaction(3, 1000, 15000)); // "You ordered 3 droids worth 3000 credits!"
